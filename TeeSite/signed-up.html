@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="height=device-height, 
+                      width=device-width, initial-scale=1.0, 
+                      minimum-scale=1.0, maximum-scale=1.0, 
+                      user-scalable=no">
+   <!-- <meta name="viewport" content="minimum-scale=1"> -->
+   <title>Word! We'll hit you up when we drop something new!</title>
+   <link href="/styles.css" rel="stylesheet"/>
+   <link rel="shortcut icon" href="/img/favicon-32x32.png">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Permanent+Marker&family=Roboto+Slab:wght@300&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body class="signed-up">
+   <header class="header">
+      <div class="logo">
+         <img src="img/logo.svg"/>
+      </div>
+
+      <div class="head-tag head-tag-1">Small batch tees for a complex palette</div>
+      <div class="head-tag head-tag-2">Hurry, only <span class="remaining"></span> of <span>1,000</span> left</div>
+      <div class="head-tag head-tag-3">When they’re gone, they’re gone!</div>
+
+   </header>
+   <div class="thank-you-tag">Thanks homie!</div>
+
+<p>Word! We'll hit you up when we drop something new! I mean, we can't say when it will be. We try to drop something hot every couple of weeks. I do be taking that time cooking up something dank tho. </p>
+
+<footer>
+   <p>Hoops Yum Yum is a boss-ass spot that randomly drops hoops-related tees 🏀👕 in a quantity of 1,000. Why only 1,000 you ax - we want to ensure that anyone who purchases is getting some unique-ass shit 🙏. I mean, nothing sucks like showin' up and some clown-ass 🤡 buster rolls up with that drip. Plus, all our shits are screen-printed on top-of-the-line tees that feel like you're back in the womb tho 💤. I mean, this shit is 🔥 and 🧊. We have no schedule and will randomly drop new tees, but only when we've cooked up 👨🏾‍🍳 something hot. You can get alerts 📟 below, and that is all they will be - alerts. We won't spam you, that shit's just too much work. </p>
+   <p style="text-align: center; display: flex; align-items: center; width: 100%; justify-content: center;">Stay Safe Yum Nation <span style="font-size: 3rem; padding-left: 0.75rem; margin-bottom: -.25rem;;">😷</span></p>
+   <p style="width: 100%; text-align:center; margin-top:3rem; font-size: 2.5rem;;">
+      ✌🏾 ✌🏻 ✌🏽 ✌🏿 ✌🏻
+   </p>
+</footer>
+<script>
+   let count;
+      const remaining = document.querySelectorAll('.remaining');
+
+      fetch("https://yum-tee-api.herokuapp.com/count/")
+      .then(res => res.json())
+      .then(data => (count = data.count))
+      .then(()=>{
+         console.log("count:" + count)
+         for(let i = 0; i < remaining.length; i++){
+            remaining[i].textContent = count;
+         }
+      })
+      .catch(error => console.log('ERROR'))
+   </script>
+</body>
+</html>

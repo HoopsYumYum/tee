@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="height=device-height, 
+                      width=device-width, initial-scale=1.0, 
+                      minimum-scale=1.0, maximum-scale=1.0, 
+                      user-scalable=no">
+   <!-- <meta name="viewport" content="minimum-scale=1"> -->
+   <title>Hoops Yum Yum</title>
+   <link href="/styles.css" rel="stylesheet"/>
+   <link rel="shortcut icon" href="/img/favicon-32x32.png">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Permanent+Marker&family=Roboto+Slab:wght@300&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body>
+   <header class="header">
+      <div class="logo">
+         <img src="img/logo.svg"/>
+      </div>
+
+      <div class="head-tag head-tag-1">Small batch tees for a complex palette</div>
+      <div class="head-tag head-tag-2">Hurry, only <span class="remaining"></span> of <span>1,000</span> left</div>
+      <div class="head-tag head-tag-3">When they’re gone, they’re gone!</div>
+
+   </header>
+   
+   <div class="gallery-container">
+      <div class="gallery">
+        
+         <div class="feature-img">
+            <img src="/img/tees/tee-001-1.jpg" class="selected-img"/>
+            <div class="pic-tag"></div>
+         </div>
+
+         <div class="tile-container">
+           
+            <div class="thumb" data-img="1">
+               <picture>
+                  <source type="image/webp" srcset="/img/tees/tee-001-1-thumb.webp" />
+                  <source type="image/jpg" srcset="/img/tees/tee-001-1-thumb.jpg" />
+                  <img src="/img/tees/tee-001-1-thumb.jpg" alt="Dat's my G in dat dank-ass Hoops Yum Yum Tee tho" />
+               </picture>
+            </div>
+           
+            <div class="thumb" data-img="2">
+               <picture>
+                  <source type="image/webp" srcset="/img/tees/tee-001-2-thumb.webp" />
+                  <source type="image/jpg" srcset="/img/tees/tee-001-2-thumb.jpg" />
+                  <img src="/img/tees/tee-001-2-thumb.jpg" alt="Dat's my G in dat dank-ass Hoops Yum Yum Tee tho" />
+               </picture>
+            </div>
+            <div class="thumb" data-img="3">
+               <picture>
+                  <source type="image/webp" srcset="/img/tees/tee-001-3-thumb.webp" />
+                  <source type="image/jpg" srcset="/img/tees/tee-001-3-thumb.jpg" />
+                  <img src="/img/tees/tee-001-3-thumb.jpg" alt="Dat's my G in dat dank-ass Hoops Yum Yum Tee tho" />
+               </picture>
+            </div>
+            <div class="thumb" data-img="4">
+               <picture>
+                  <source type="image/webp" srcset="/img/tees/tee-001-4-thumb.webp" />
+                  <source type="image/jpg" srcset="/img/tees/tee-001-4-thumb.jpg" />
+                  <img src="/img/tees/tee-001-4-thumb.jpg" alt="Dat's my G in dat dank-ass Hoops Yum Yum Tee tho" />
+               </picture>
+            </div>
+            <div class="thumb" data-img="5">
+               <picture>
+                  <source type="image/webp" srcset="/img/tees/tee-001-5-thumb.webp" />
+                  <source type="image/jpg" srcset="/img/tees/tee-001-5-thumb.jpg" />
+                  <img src="/img/tees/tee-001-5-thumb.jpg" alt="Dat's my G in dat dank-ass Hoops Yum Yum Tee tho" />
+               </picture>
+            </div>
+         </div>
+      </div>
+   </div>
+
+   <div class="title-box">
+      <div class="title tee-name">Fire Dolan</div>
+      <div class="tri-blend">Extra soft tri-blend tee.</div>
+      <!-- social share buttons -->
+      <div class="addthis_inline_share_toolbox"></div>
+   </div>
+   <p>All tees are made on that <span class="paint neon-yellow">extra-soft</span> tri-blend shit that we all love. This <span class="tee-name"></span>  joint here is <span class="paint neon-blue">nice as ice</span> but only available on a black tees but as always, it can be snatched up as a 
+      slim-fit<a class="info" data-modal-id="slim-fit" href="#">&#9432;</a>, 
+      womans-cut<a class="info" data-modal-id="womans-fit" href="#">&#9432;</a>, 
+      regular-fit<a class="info" data-modal-id="regular-fit" href="#">&#9432;</a>, or 
+      lil' homie<a class="info" data-modal-id="youth-fit" href="#">&#9432;</a> tee. 
+   </p>
+
+
+<!-- Buy Button -->
+<div id="smart-button-container" class="payment-contianer">
+   <div style="text-align: center;" class="inner-payment-contianer">
+     <div>
+       <h2>Get Your <span class="tee-name"></span> Tee Now</h2>
+
+      <div class="num-left">Only <span class="remaining"></span> of <span>1,000</span> left!</div>
+
+      <div class="buy-select-container">
+         <div class="select-label">Style:</div>
+         <select id="item-options" class="fit-options">
+            <option data-fit="slim" class="fit-option" value="Slim-Fit" price="35">Slim-Fit - $35</option>
+            <option data-fit="woman" class="fit-option" value="Womans-Cut" price="35">Womans-Cut - $35</option>
+            <option data-fit="regular" class="fit-option" value="Regular-Fit" price="35">Regular-Fit - $35</option>
+            <option data-fit="youth" class="fit-option" value="Youth" price="35">Lil' Homies - $30</option>
+         </select>
+      </div>
+
+       <div class="buy-select-container">
+         <div class="select-label shorter">Size:</div>
+
+         <div class="radio-container">
+               <input class="size-option" type="radio" id="YS" name="size" value="YS">
+               <label class="size-box youth" for="YS">YS</label>
+               
+               <input class="size-option" type="radio" id="YM" name="size" value="YM">
+               <label class="size-box youth" for="YM">YM</label>
+
+               <input class="size-option" type="radio" id="YL" name="size" value="YL">
+               <label class="size-box youth" for="YL">YL</label>
+
+               <input class="size-option" type="radio" id="XS" name="size" value="XS">
+               <label class="size-box woman" for="XS">XS</label>
+                
+               <input class="size-option" type="radio" id="S" name="size" value="S">
+               <label class="size-box woman slim regular" for="S">S</label>
+               
+               <input class="size-option" type="radio" id="M" name="size" value="M">
+               <label class="size-box woman slim regular" for="M">M</label>
+               
+               <input class="size-option" type="radio" id="L" name="size" value="L">
+               <label class="size-box woman slim regular" for="L">L</label>
+               
+               <input class="size-option" type="radio" id="XL" name="size" value="XL">
+               <label class="size-box woman slim regular" for="XL">XL</label>
+               
+               <input class="size-option" type="radio" id="2XL" name="size" value="2XL">
+               <label class="size-box woman slim regular" for="2XL">2XL</label>
+
+               <input class="size-option" type="radio" id="3XL" name="size" value="3XL">
+               <label class="size-box slim regular" for="3XL">3XL</label>
+
+         </div>
+      </div>
+
+      <span class="alert-msg"></span>
+
+      <!-- Add Size to Fit -->
+         <script>
+            const sizeOptions = document.querySelectorAll('.size-option');
+            const fitOptions = document.querySelectorAll('.fit-option');
+            const fitOptionsList = document.querySelector('.fit-options');
+            const sizeBoxes= document.querySelectorAll('.size-box');
+            const alertBox = document.querySelector('.alert-msg');
+
+            fitOptionsList.addEventListener('change', function(e){
+               let selection = e.target;
+               var selectionFit = selection.options[selection.selectedIndex].dataset.fit;
+               
+               for(var i = 0; i < sizeBoxes.length; i++){
+                  if(sizeBoxes[i].classList.contains(selectionFit)){
+                     sizeBoxes[i].style.display = "flex";
+                  } else {
+                     sizeBoxes[i].style.display = "none";
+                  };
+                  // console.log(sizeBoxes[i].previousElementSibling.checked)
+                  if(!sizeBoxes[i].classList.contains(selectionFit) && sizeBoxes[i].previousElementSibling.checked === true){
+                     sizeBoxes[i].previousElementSibling.checked = false;
+                     alertBox.innerHTML = `<img src="/img/alert.gif"/>
+                     <span>Select a new size</span>
+                     <img src="/img/alert.gif"/>`;
+                  };
+               }
+            })
+
+            sizeOptions.forEach(function(option){
+               option.addEventListener('click', function(){
+                     alertBox.textContent = ""
+                  let sizeValue = this.value;
+                  fitOptions.forEach(function(fit){
+                     let fitValue = fit.value;
+                     if(
+                        fitValue.includes("- S") || 
+                        fitValue.includes("- M") || 
+                        fitValue.includes("- L")) {
+                           let newSting = fitValue.slice(0, -1);
+                           fit.value = newSting + sizeValue
+                     } else if( 
+                        fitValue.includes("- YS") ||
+                        fitValue.includes("- YM") ||
+                        fitValue.includes("- YL") ||
+                        fitValue.includes("- XS") ||
+                        fitValue.includes("- XL")){
+                           let newSting = fitValue.slice(0, -2);
+                           fit.value = newSting + sizeValue
+                     } else if( 
+                        fitValue.includes("- 2XL") || 
+                        fitValue.includes("- 3XL")){
+                           let newSting = fitValue.slice(0, -3);
+                           fit.value = newSting + sizeValue
+                     } else {
+                        fit.value = fitValue + " - " + sizeValue;
+                     }
+                  })
+               })
+            })
+         </script>
+
+       <select style="display: none;" id="quantitySelect"></select>
+     </div>
+   <div id="paypal-button-container"></div>
+   </div>
+ </div>
+ <script src="https://www.paypal.com/sdk/js?client-id=AS0-a9ngWTUtbg8Xk837ch7Zo1toAcFffIs2nlW8ypJsRqoHM70PNDf9uEu3CZfzkJk8e5LqMQhU5SeP&currency=USD" data-sdk-integration-source="button-factory"></script>
+ <script>
+   function initPayPalButton() {
+     var shipping = 0;
+     var itemOptions = document.querySelector("#smart-button-container #item-options");
+ var quantity = parseInt();
+ var quantitySelect = document.querySelector("#smart-button-container #quantitySelect");
+ if (!isNaN(quantity)) {
+   quantitySelect.style.visibility = "visible";
+ }
+ var orderDescription = 'Hoops Yum Yum Tee';
+ if(orderDescription === '') {
+   orderDescription = 'Item';
+ }
+ paypal.Buttons({
+   style: {
+     shape: 'rect',
+     color: 'blue',
+     layout: 'vertical',
+     label: 'paypal',
+     
+   },
+   createOrder: function(data, actions) {
+     var selectedItemDescription = itemOptions.options[itemOptions.selectedIndex].value;
+     var selectedItemPrice = parseFloat(itemOptions.options[itemOptions.selectedIndex].getAttribute("price"));
+     var tax = (0 === 0) ? 0 : (selectedItemPrice * (parseFloat(0)/100));
+     if(quantitySelect.options.length > 0) {
+       quantity = parseInt(quantitySelect.options[quantitySelect.selectedIndex].value);
+     } else {
+       quantity = 1;
+     }
+
+     tax *= quantity;
+     tax = Math.round(tax * 100) / 100;
+     var priceTotal = quantity * selectedItemPrice + parseFloat(shipping) + tax;
+     priceTotal = Math.round(priceTotal * 100) / 100;
+     var itemTotalValue = Math.round((selectedItemPrice * quantity) * 100) / 100;
+
+     return actions.order.create({
+       purchase_units: [{
+         description: orderDescription,
+         amount: {
+           currency_code: 'USD',
+           value: priceTotal,
+           breakdown: {
+             item_total: {
+               currency_code: 'USD',
+               value: itemTotalValue,
+             },
+             shipping: {
+               currency_code: 'USD',
+               value: shipping,
+             },
+             tax_total: {
+               currency_code: 'USD',
+               value: tax,
+             }
+           }
+         },
+         items: [{
+           name: selectedItemDescription,
+           unit_amount: {
+             currency_code: 'USD',
+             value: selectedItemPrice,
+           },
+           quantity: quantity
+         }]
+       }]
+     });
+   },
+   onApprove: function(data, actions) {
+     return actions.order.capture().then(function(details) {
+       window.location.href = 'https://www.hoopsyumyum.com';
+     });
+   },
+   onError: function(err) {
+     console.log(err);
+   },
+ }).render('#paypal-button-container');
+}
+
+initPayPalButton();
+
+   //Straighten up payment div on ifram click
+   const paymentBTNContianer = document.querySelector('.payment-contianer');
+   var iframewatcher = setInterval(function(){
+      var activeE = document.activeElement;
+      if(activeE && activeE.tagName == 'IFRAME'){
+         paymentBTNContianer.classList.add('straighten-up');
+         clearInterval(iframewatcher);
+      }
+   }, 100);
+ </script>
+
+<!--END Buy Button -->
+
+<!-- <hr> -->
+
+<p>
+UGH, I mean, can Dolan just get outta New York 🗽 already?!?! Worst record in basketball over the last 20 years is just the start of it tho. Oak 👴🏾 knows what I'm talking about, sup Oak 👊🏽 . I mean, this cat really needs to concentrate on JD &amp; The Straight Shot 🎸 and let the Knicks go...You know we had to slip in a Straight Shots zinger tho - LOL right 🤣 
+</p>
+
+<hr>
+
+<h3>About our tees</h3>
+
+<p>
+   The silky smoothness of these tri-blend t-shirts be like 💋. This tee material is long-lasting and comfortable as a motherfucker. Every cut we offer has a great fit with a longer length and slightly more narrow sleeves. All tees are made from a blend of cotton, polyester, rayon that is just straight-up nice as ice 🧊 tho. That combination allows for a lightweight fabric that fits and feels the heavens sewed this shit just for your ass.
+   <ul>
+      <li>3.8 oz. 50/25/25 polyester, pre-shrunk combed ringspun cotton, rayon tri-blend material; Black Heather Tri-Blend is 15/70/15</li>
+      <li>Double-needle stitched for durability</li>
+      <li>Silky smooth luxurious fabric</li>
+      <li>Stretchy ribbed collar for comfort</li>
+      <li>Screen printing</li>
+      <li>Delivered in approximately 10-bidness dayz</li>
+   </ul>
+</p>
+
+<!-- Buy Button -->
+
+
+   <footer>
+      <p>Hoops Yum Yum is a boss-ass spot that randomly drops hoops-related tees 🏀👕 in a quantity of 1,000. Why only 1,000 you ax - we want to ensure that anyone who purchases is getting some unique-ass shit 🙏. I mean, nothing sucks like showin' up and some clown-ass 🤡 buster rolls up with that drip. Plus, all our shits are screen-printed on top-of-the-line tees that feel like you're back in the womb tho 💤. I mean, this shit is 🔥 and 🧊. We have no schedule and will randomly drop new tees, but only when we've cooked up 👨🏾‍🍳 something hot. You can get alerts 📟 below, and that is all they will be - alerts. We won't spam you, that shit's just too much work. </p>
+      <p style="text-align: center; display: flex; align-items: center; width: 100%; justify-content: center;">Stay Safe Yum Nation <span style="font-size: 3rem; padding-left: 0.75rem; margin-bottom: -.25rem;;">😷</span></p>
+      <button>
+         <div>Tell me when there's new shit!</div>
+      </button>
+      <p style="width: 100%; text-align:center; margin-top:3rem; font-size: 2.5rem;;">
+         ✌🏾 ✌🏻 ✌🏽 ✌🏿 ✌🏻
+      </p>
+   </footer>
+
+<!-- END MAIN CONTENT -->
+<!-- END MAIN CONTENT -->
+<!-- END MAIN CONTENT -->
+
+
+
+<!-- Regular Tee Info -->
+<div class="modal regular-fit">
+   <div class="modal-box">
+      <h3>Regular-Fit</h3>
+      <p>
+         <img class="tee" src="/img/reg-tee.svg"/>
+         Whether you're trying to make a dank-ass <span class="tee-name"></span> kite with this shit or you like your tees fittin' a bit loose, this is your joint. This shit is soft and roomy. Let's go! 
+      </p>
+      <div>
+         <p>measurements in inches</p>
+      </div>
+      <table>
+         <thead>
+           <tr>
+             <th>SIZE</th>
+             <th>S</th>
+             <th>M</th>
+             <th>L</th>
+             <th>XL</th>
+             <th>2XL</th>
+             <th>3XL</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>LENGTH</td>
+             <td>28</td>
+             <td>29</td>
+             <td>30</td>
+             <td>31</td>
+             <td>32</td>
+             <td>32.5</td>
+           </tr>
+           <tr>
+             <td>WIDTH</td>
+             <td>20</td>
+             <td>21</td>
+             <td>22.5</td>
+             <td>24</td>
+             <td>25.5</td>
+             <td>27.5</td>
+           </tr>
+         </tbody>
+         </table>
+         <button class="close-modal">CLOSE</button>
+   </div>
+</div>
+
+<!-- Womans Tee Info -->
+<div class="modal womans-fit">
+   <div class="modal-box">
+      <h3>Womans-Cut</h3>
+      <p>
+         <img class="tee" src="/img/womans-tee.svg"/>
+         I mean, these tees be lookin' fly as hell and feeling even better. Perfectly cut and soft as shit, and by soft as shit, I mean fucking soft as shit tho. Really, what more can I say, just choice as hell. Gobble one of these <span class="tee-name"></span> shits up quick like, I'm just sayin' tho.
+      </p>
+      <div>
+         <p>measurements in inches</p>
+      </div>
+      <table>
+         <thead>
+           <tr>
+             <th>SIZE</th>
+             <th>S</th>
+             <th>M</th>
+             <th>L</th>
+             <th>XL</th>
+             <th>2XL</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>LENGTH</td>
+             <td>26.5</td>
+             <td>27</td>
+             <td>27.5</td>
+             <td>28</td>
+             <td>28.5</td>
+           </tr>
+           <tr>
+             <td>WIDTH</td>
+             <td>16.75</td>
+             <td>17.75</td>
+             <td>18.75</td>
+             <td>20.25</td>
+             <td>21.75</td>
+           </tr>
+         </tbody>
+         </table>
+         <button class="close-modal">CLOSE</button>
+   </div>
+</div>
+
+<!-- Regular Tee Info -->
+<div class="modal slim-fit">
+   <div class="modal-box">
+      <h3>Slim-Fit</h3>
+      <p>
+         <img class="tee" src="/img/slim-tee.svg"/>
+         Damn son, you be tryin' to show off that fit bod or do your ass just need to eat something? I mean, that's the question tho. For real, this slim-fit <span class="tee-name"></span> tee is nice as ice, soft as hell and fits like a fucking glove. You bess stach one up.  
+      </p>
+      <div>
+         <p>measurements in inches</p>
+      </div>
+      <table>
+         <thead>
+           <tr>
+             <th>SIZE</th>
+             <th>S</th>
+             <th>M</th>
+             <th>L</th>
+             <th>XL</th>
+             <th>2XL</th>
+             <th>3XL</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>LENGTH</td>
+             <td>28</td>
+             <td>29</td>
+             <td>30</td>
+             <td>31</td>
+             <td>32</td>
+             <td>33</td>
+           </tr>
+           <tr>
+             <td>WIDTH</td>
+             <td>18</td>
+             <td>20</td>
+             <td>22</td>
+             <td>24</td>
+             <td>26</td>
+             <td>28</td>
+           </tr>
+         </tbody>
+         </table>
+         <button class="close-modal">CLOSE</button>
+   </div>
+</div>
+
+
+<!-- Womans Tee Info -->
+<div class="modal youth-fit">
+   <div class="modal-box">
+      <h3>Lil' Homies</h3>
+      <p>
+         <img class="tee" src="/img/youth-tee.svg"/>
+         If you is small as hell or you're just tryin' to hook up your lil' homie with a youth-size tee to look crisp as hell on their virtual school zoom call, we got just the tee you need. Now scoop up that <span class="tee-name"></span> youth-size tee and make all those other cats jelly as a mother fucker.  
+      </p>
+      <div>
+         <p>measurements in inches</p>
+      </div>
+      <table>
+         <thead>
+           <tr>
+             <th>SIZE</th>
+             <th>YS (6-8)</th>
+             <th>YM (10-12)</th>
+             <th>YL (14-16)</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>LENGTH</td>
+             <td>20.875</td>
+             <td>22.125</td>
+             <td>23.375</td>
+           </tr>
+           <tr>
+             <td>WIDTH</td>
+             <td>15.25</td>
+             <td>16.25</td>
+             <td>17.25</td>
+           </tr>
+         </tbody>
+         </table>
+         <button class="close-modal">CLOSE</button>
+   </div>
+</div>
+
+<script>
+
+   let count;
+   const remaining = document.querySelectorAll('.remaining');
+
+   fetch("https://yum-tee-api.herokuapp.com/count/")
+   .then(res => res.json())
+   .then(data => (count = data.count))
+   .then(()=>{
+      console.log("count:" + count)
+      for(let i = 0; i < remaining.length; i++){
+         remaining[i].textContent = count;
+      }
+   })
+   .catch(error => console.log('ERROR'))
+
+
+   const teeName = "Fire Dolan";
+   const picDeets = [
+      {
+         msg: "Damn this tee is 🔥 tho",
+         top: "",
+         bcolor:"rgb(0, 217, 255)"
+      },
+      {
+         msg: "this tee = 🔥;&emsp;  Dolan = 🤡💩;",
+         top: "",
+         bcolor:"rgb(255, 0, 191)"
+      },
+      {
+         msg: "Ugh, fucking Dolan tho.",
+         top: "82%",
+         bcolor:"rgb(0, 255, 106)"
+      },
+      {
+         msg: "If you want a cutoff  ✂️, that's on you",
+         top: "62%",
+         bcolor:"rgb(162, 0, 255)"
+      },
+      {
+         msg: "Made for a true G, thru and thru",
+         top: "42%",
+         bcolor:"rgb(217, 255, 0)", 
+      }
+   ];
+
+   if(localStorage.getItem('purchase')){
+      let lsTeeName = localStorage.getItem('design');
+      if(teeName !== lsTeeName){
+         localStorage.removeItem('purchase');
+         localStorage.removeItem('design');
+      }
+
+   }
+
+   const teeNames = document.querySelectorAll('.tee-name');
+   teeNames.forEach(function(t){
+      t.textContent = teeName;
+   })
+
+   const imgNumber = "001";
+   const selectedImg = document.querySelector('.selected-img');
+   const imageThumbs = document.querySelectorAll('.thumb');
+   const imgTag = document.querySelector(".pic-tag");
+
+   imgTag.innerHTML = picDeets[0].msg;
+
+   imageThumbs.forEach(function(swapImg){
+      swapImg.addEventListener('click', function(){
+         let imgNum = this.dataset.img;
+         selectedImg.src = `/img/tees/tee-${imgNumber}-${imgNum}.jpg`;
+         let thisNum = parseInt(imgNum) - 1;
+         selectedImg.style.borderColor = picDeets[thisNum].bcolor; 
+         let picMsg = picDeets[thisNum].msg;
+         let msgTop = picDeets[thisNum].top;  
+        
+         if(picMsg === undefined || picMsg === ""){
+            imgTag.style.display = "none";
+         } else {
+            imgTag.style.display = "flex";
+            imgTag.innerHTML = picMsg; 
+            if(picMsg !== undefined || picMsg !== ""){
+               imgTag.style.top = msgTop;
+            }
+         }
+      })
+   });
+
+
+   const infoModal = document.querySelectorAll('.info');
+   infoModal.forEach(function(openModal){
+      openModal.addEventListener('click', function(e){
+         e.preventDefault()
+         let modelID = this.dataset.modalId;
+         document.getElementsByClassName(modelID)[0].style.display="flex";
+      })
+   });
+   
+   const closeModal = document.querySelectorAll('.close-modal');
+   for(var i = 0; i < closeModal.length; i++){
+      closeModal[i].addEventListener('click', function(){
+         console.log('close')
+         const modals = document.querySelectorAll('.modal');
+         for(var x = 0; x < modals.length; x++){
+            modals[x].style.display = "none";
+         }
+      })
+   }
+
+
+      // When the user scrolls the page, execute stickIt
+      window.onscroll = function() {stickIt()};
+
+      // Get the header
+      var header = document.querySelector(".header");
+
+      // Get the offset position of the header
+      var sticky = header.offsetTop + 80;
+
+      // Add/remove the scrolled class to/form the header when you reach/leave its scroll position
+      function stickIt() {
+      if (window.pageYOffset > sticky) {
+         header.classList.add("scrolled");
+      } else {
+         header.classList.remove("scrolled");
+      }
+      }
+
+</script>
+
+<!-- Go to www.addthis.com/dashboard to customize your tools --> 
+<script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5fb878b3c702aa55"></script>
+
+</body>
+</html>

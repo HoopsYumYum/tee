@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="height=device-height, 
+                      width=device-width, initial-scale=1.0, 
+                      minimum-scale=1.0, maximum-scale=1.0, 
+                      user-scalable=no">
+   <!-- <meta name="viewport" content="minimum-scale=1"> -->
+   <title>Thanks for purchasing a Dank Tee!</title>
+   <link href="/styles.css" rel="stylesheet"/>
+   <link rel="shortcut icon" href="/img/favicon-32x32.png">
+   <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Permanent+Marker&family=Roboto+Slab:wght@300&family=Special+Elite&display=swap" rel="stylesheet">
+</head>
+<body class="thank-you">
+   <header class="header">
+      <div class="logo">
+         <img src="img/logo.svg"/>
+      </div>
+
+      <div class="head-tag head-tag-1">Small batch tees for a complex palette</div>
+      <div class="head-tag head-tag-2">Hurry, only <span class="remaining"></span> of <span>1,000</span> left</div>
+      <div class="head-tag head-tag-3">When they’re gone, they’re gone!</div>
+
+   </header>
+   <div class="thank-you-tag">Thanks homie!</div>
+
+<p>Serious up, we're gunna' print your shit up, bubble wrap the fuck out of it 📦, and throw that shit in the mail 📬 ASAP. Your ass will be lookin' crisper than a Popeyes Chicken 🐔 Sandwich 🥪 in no time 😋. </p>
+
+<div class="coming-at-ya-container">
+   <div class="coming-at-ya-arrow-contianer">
+   
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 300 253" style="enable-background:new 0 0 300 253;" xml:space="preserve">
+         <g>
+            <polygon class="coming-at-yah-arrow-back" points="151.8,252 125.9,147.8 160,159 174,125 33,97 73,10 248,76 207,181 240,191 	"/>
+         </g>
+         <g>
+            <polygon class="coming-at-yah-arrow" points="140.5,248.2 117.6,139 151.7,150.2 165.7,116.2 22.7,85.2 64.7,1.2 242.7,64.2 198.7,167.2 
+               237.7,180.2 	"/>
+         </g>
+         <text transform="matrix(0.8653 0.2611 -0.2611 0.9653 69.0767 44.4376)">
+            <tspan x="0" y="0" class="coming-at-ya-type">This shit here be</tspan>
+            <tspan x="-6.3" y="24" class="coming-at-ya-type">coming your way!</tspan>
+         </text>
+      </svg>
+
+   </div>
+      <div class="gallery">
+         <div class="feature-img">
+            <img src="/img/tees/tee-001-2.jpg" class="selected-img"/>
+         </div>
+      </div>
+   </div>
+
+<p>For real tho, we are going to ship your shit as soon as we can. You can expect your fresh-ass tee to arrive in 10-14 bidness days. No joke, we serious-up appreciate you. </p>
+
+<footer>
+   <p>Hoops Yum Yum is a boss-ass spot that randomly drops hoops-related tees 🏀👕 in a quantity of 1,000. Why only 1,000 you ax - we want to ensure that anyone who purchases is getting some unique-ass shit 🙏. I mean, nothing sucks like showin' up and some clown-ass 🤡 buster rolls up with that drip. Plus, all our shits are screen-printed on top-of-the-line tees that feel like you're back in the womb tho 💤. I mean, this shit is 🔥 and 🧊. We have no schedule and will randomly drop new tees, but only when we've cooked up 👨🏾‍🍳 something hot. You can get alerts 📟 below, and that is all they will be - alerts. We won't spam you, that shit's just too much work. </p>
+   <p style="text-align: center; display: flex; align-items: center; width: 100%; justify-content: center;">Stay Safe Yum Nation <span style="font-size: 3rem; padding-left: 0.75rem; margin-bottom: -.25rem;;">😷</span></p>
+   <button>
+      <div>Tell me when there's new shit!</div>      
+   </button>
+   <p style="width: 100%; text-align:center; margin-top:3rem; font-size: 2.5rem;;">
+      ✌🏾 ✌🏻 ✌🏽 ✌🏿 ✌🏻
+   </p>
+</footer>
+
+   <script>
+
+   let profile;
+   let mOne = 0;
+
+   if(!localStorage.getItem('purchase')){
+
+      fetch("https://yum-tee-api.herokuapp.com/count/")
+      .then(res => res.json())
+      .then(data => profile = data)
+      .then(() => {console.log(profile.count)})
+      .then(() => profile.count = profile.count - 1)
+      .then(() => {console.log(profile)})
+      .then(() => {putFunc()})
+      .then(() => {
+         mOne = -1;
+         localStorage.setItem('purchase', true)
+         localStorage.setItem('design', profile.design)
+      })
+      .catch(error => console.log('ERROR'));
+
+      const putFunc = () => {fetch("https://yum-tee-api.herokuapp.com/count/", {
+            method: 'PUT',
+            body: JSON.stringify({
+               "design": profile.design,
+               "count": profile.count
+            }),
+            headers: {
+               'Content-type': 'application/json; charset=UTF-8'
+            }
+         })
+         .then(response => response.json())
+         .then(json => console.log(json))
+      }
+   }
+
+      let count;
+      const remaining = document.querySelectorAll('.remaining');
+
+      fetch("https://yum-tee-api.herokuapp.com/count/")
+      .then(res => res.json())
+      .then(data => (count = data.count))
+      .then(()=>{
+         count = count + mOne;
+         console.log("count:" + count)
+         for(let i = 0; i < remaining.length; i++){
+            remaining[i].textContent = count;
+         }
+      })
+      .catch(error => console.log('ERROR'))
+   </script>
+</body>
+</html>
