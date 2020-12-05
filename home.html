@@ -336,7 +336,7 @@ UGH, I mean, can Dolan just get outta New York 🗽 already?!?! Worst record in 
    <footer>
       <p>Hoops Yum Yum is a boss-ass spot that randomly drops hoops-related tees 🏀👕 in a quantity of 1,000. Why only 1,000 you ax - we want to ensure that anyone who purchases is getting some unique-ass shit 🙏. I mean, nothing sucks like showin' up and some clown-ass 🤡 buster rolls up with that drip. Plus, all our shits are screen-printed on top-of-the-line tees that feel like you're back in the womb tho 💤. I mean, this shit is 🔥 and 🧊. We have no schedule and will randomly drop new tees, but only when we've cooked up 👨🏾‍🍳 something hot. You can get alerts 📟 below, and that is all they will be - alerts. We won't spam you, that shit's just too much work. </p>
       <p style="text-align: center; display: flex; align-items: center; width: 100%; justify-content: center;">Stay Safe Yum Nation <span style="font-size: 3rem; padding-left: 0.75rem; margin-bottom: -.25rem;;">😷</span></p>
-      <button>
+      <button class="sign-up-btn">
          <div>Tell me when there's new shit!</div>
       </button>
       <p style="width: 100%; text-align:center; margin-top:3rem; font-size: 2.5rem;;">
@@ -531,6 +531,17 @@ UGH, I mean, can Dolan just get outta New York 🗽 already?!?! Worst record in 
    </div>
 </div>
 
+<!-- Womans Tee Info -->
+<div class="modal sign-up-modal">
+   <div class="modal-box">
+      <h3>Get Dem Drop Alerts</h3>
+      <p>Get alerts when we drop hot new shit.</p>
+      <div id="formContainer"></div>
+
+      <button class="close-modal">CANCEL</button>
+   </div>
+</div>
+
 <script>
 
    let count;
@@ -661,6 +672,22 @@ UGH, I mean, can Dolan just get outta New York 🗽 already?!?! Worst record in 
          gal.classList.remove("scrolled");
       }
       }
+
+      const signUpModal = () => {
+         const req = new XMLHttpRequest();
+         req.onload = function() {
+            document.getElementById('formContainer').innerHTML = this.responseText;
+         }
+         req.open("get", "alerts-form.html", true);
+         req.send();
+      }
+
+      const signUpBtn = document.querySelector('.sign-up-btn');
+
+      signUpBtn.addEventListener('click', function(){
+         signUpModal();
+         document.querySelector('.sign-up-modal').style.display="flex";
+      });
 
 </script>
 

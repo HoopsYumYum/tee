@@ -686,6 +686,15 @@ header.scrolled .head-tag-3 {
   font-family: 'Permanent Marker', cursive;
   letter-spacing: 0.25rem;
 }
+.modal.sign-up-modal .modal-box {
+  box-shadow: 0 0 5rem 2rem #ff9500;
+}
+.modal.sign-up-modal .modal-box button.close-modal {
+  color: #ff9500;
+}
+.modal.sign-up-modal .modal-box div {
+  padding-top: 1.5rem;
+}
 .modal.regular-fit .modal-box {
   box-shadow: 0 0 5rem 2rem #00d9ff;
 }
@@ -1047,6 +1056,90 @@ footer button div {
 .thank-you .gallery .feature-img img {
   width: 100%;
   border-color: #a200ff;
+}
+#formContainer {
+  padding-top: 0;
+}
+.sign-up-form-container .mc-field-group:nth-of-type(1) {
+  transform: rotate(-1.2deg);
+}
+.sign-up-form-container .mc-field-group:nth-of-type(2) {
+  transform: rotate(1.2deg);
+}
+.sign-up-form-container label {
+  font-size: 1.4rem;
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 0.2rem;
+  display: block;
+  margin-bottom: 0.4rem;
+}
+.sign-up-form-container input {
+  appearance: none;
+  width: 100%;
+  padding: 1.8rem 1.5rem;
+  font-size: 1.6rem;
+  border-radius: 4px;
+  font-family: 'Special Elite', cursive;
+  background-color: #fff;
+  border: solid 0.05rem #858585;
+  background-position: 96% center;
+  background-repeat: no-repeat;
+  background-size: 22px;
+  border-radius: 0;
+  margin-bottom: 1rem;
+}
+.sign-up-form-container input::placeholder {
+  color: #ccc;
+  letter-spacing: 0.2rem;
+}
+.sign-up-form-container input:focus {
+  box-shadow: 0 0 2rem #ff9500;
+  outline-color: #fff;
+}
+.sign-up-form-container input:focus ::placeholder {
+  color: #fff;
+}
+.form-button-div {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 6rem;
+  margin-top: 1rem;
+  margin-bottom: 2.5rem;
+  border: none;
+  background-color: #ff00bf;
+  transform: rotate(-1.2deg);
+}
+@media screen and (min-width: 1200px) {
+  .form-button-div {
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+.form-button-div .form-button {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00ff6a;
+  outline: none;
+  color: black;
+  font-family: 'Special Elite', cursive;
+  letter-spacing: 0.05rem;
+  margin: -0.5rem 0 0 -0.5rem;
+  width: 100%;
+  height: 6rem;
+  text-align: center;
+  font-size: 1.7rem;
+  border-radius: 0;
+}
+@media screen and (min-width: 1200px) {
+  .form-button-div .form-button {
+    max-width: 500px;
+  }
 }
 .signed-up footer {
   margin-top: 6rem;
