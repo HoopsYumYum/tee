@@ -646,6 +646,7 @@ UGH, I mean, can Dolan just get outta New York 🗽 already?!?! Worst record in 
 
       // Get the header
       var header = document.querySelector(".header");
+      var gal = document.querySelector(".gallery-container");
 
       // Get the offset position of the header
       var sticky = header.offsetTop + 80;
@@ -654,8 +655,10 @@ UGH, I mean, can Dolan just get outta New York 🗽 already?!?! Worst record in 
       function stickIt() {
       if (window.pageYOffset > sticky) {
          header.classList.add("scrolled");
+         gal.classList.add("scrolled");
       } else {
          header.classList.remove("scrolled");
+         gal.classList.remove("scrolled");
       }
       }
 

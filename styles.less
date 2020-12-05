@@ -101,9 +101,8 @@ ul {
   padding: 0;
   list-style-position: outside;
   @media screen and (min-width: 700px) {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 600px;
+    margin: 2.5rem auto;
   }
 }
 li {
@@ -122,6 +121,14 @@ h3 {
   font-size: 2.5rem;
   line-height: 2.7rem;
   margin-bottom: 1rem;
+  @media screen and (min-width: 700px) {
+    font-size: 3.5rem;
+    line-height: 3.9rem;
+    margin-bottom: 1.5rem;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 hr {
@@ -129,6 +136,10 @@ hr {
   margin: 3.5rem auto 4rem;
   width: 90vw;
   border-top: 0;
+  @media screen and (min-width: 700px) {
+    margin: 5.5rem auto 6rem;
+    max-width: 1000px;
+  }
 }
 
 .logo {
@@ -362,6 +373,9 @@ header.scrolled {
   position: relative;
   width: 100vw;
   overflow: hidden;
+  &.scrolled {
+    margin-top: 12rem;
+  }
 }
 .gallery {
   display: flex;
@@ -399,6 +413,12 @@ header.scrolled {
       border-right: solid 5px;
       border-bottom: solid 8px;
       border-color: @neon-blue;
+      @media screen and (min-width: 1200px) {
+        border-top-width: 2px;
+        border-left-width: 2px;
+        border-right-width: 6px;
+        border-bottom-width: 9px;
+      }
     }
     .pic-tag {
       position: absolute;
@@ -441,6 +461,7 @@ header.scrolled {
       }
       @media screen and (min-width: 1200px) {
         width: 45%;
+        margin-bottom: 1rem;
       }
       &:nth-of-type(1) {
         background-color: @neon-blue;
@@ -499,6 +520,9 @@ header.scrolled {
         position: relative;
         margin: -1rem 0 0 -0.4rem;
         border: solid 0.025rem;
+        @media screen and (min-width: 1200px) {
+          border-width: 0.2rem;
+        }
       }
     }
   }
@@ -518,8 +542,8 @@ header.scrolled {
     padding: 1rem 2rem 1.5rem 5.75rem;
   }
   @media screen and (min-width: 1200px) {
-    padding: 1rem 2rem 1.5rem 10.75rem;
-    width: 1000px;
+    padding: 1rem 2rem 1.5rem 9.75rem;
+    width: 900px;
     margin: 1rem auto;
   }
   .title {
@@ -666,6 +690,11 @@ footer {
     background-color: @neon-yellow;
     transform: rotate(-1.7deg);
     animation: rotaty ease-in-out 3.5s infinite;
+    @media screen and (min-width: 1200px) {
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
     div {
       position: absolute;
       display: flex;
@@ -680,6 +709,9 @@ footer {
       height: 6rem;
       text-align: center;
       font-size: 1.7rem;
+      @media screen and (min-width: 1200px) {
+        max-width: 500px;
+      }
     }
   }
 }
