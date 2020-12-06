@@ -57,6 +57,13 @@ a.info {
   height: 1.2rem;
   display: inline-block;
 }
+a.info.size-chart {
+  color: black;
+  font-size: 1.2rem;
+  font-family: 'Inconsolata', monospace;
+  padding-left: 0;
+  text-transform: capitalize;
+}
 p {
   font-family: 'Inconsolata', monospace;
   color: #fff;
@@ -659,6 +666,10 @@ header.scrolled .head-tag-3 {
   text-transform: uppercase;
   letter-spacing: 0.25rem;
 }
+.modal .modal-box div p span.inches {
+  font-size: 1.25rem;
+  letter-spacing: 0.15rem;
+}
 .modal .modal-box table {
   width: 100%;
   text-align: left;
@@ -669,6 +680,9 @@ header.scrolled .head-tag-3 {
   padding-bottom: 1rem;
   font-size: 1.5rem;
   font-family: 'Inconsolata', monospace;
+}
+.modal .modal-box th:nth-of-type(1) {
+  padding-right: 1.5rem;
 }
 .modal .modal-box td {
   padding: 1rem 0 0 0;
@@ -718,6 +732,23 @@ header.scrolled .head-tag-3 {
 }
 .modal.youth-fit .modal-box button.close-modal {
   color: #a200ff;
+}
+.modal.all-sizes .modal-box {
+  box-shadow: 0 0 5rem 2rem #fd5d30;
+}
+.modal.all-sizes .modal-box button.close-modal {
+  color: #fd5d30;
+}
+.modal.all-sizes .modal-box table {
+  padding-top: 0.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: dotted #333 0.025rem;
+}
+.modal.all-sizes .modal-box div {
+  padding-top: 1.5rem;
+}
+.modal.all-sizes .modal-box div p {
+  padding-left: 0.3rem;
 }
 footer {
   width: 100vw;
@@ -884,6 +915,7 @@ footer button div {
 }
 .payment-contianer .inner-payment-contianer .buy-select-container .select-label.shorter {
   width: 8.25rem;
+  line-height: 1.5rem;
 }
 .payment-contianer .inner-payment-contianer select {
   -webkit-appearance: none;

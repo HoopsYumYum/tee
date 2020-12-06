@@ -108,7 +108,10 @@
       </div>
 
        <div class="buy-select-container">
-         <div class="select-label shorter">Size:</div>
+         <div class="select-label shorter">
+            Size:
+            <a class="info size-chart" data-modal-id="all-sizes" href="#">size chart</a>
+         </div>
 
          <div class="radio-container">
                <input class="size-option" type="radio" id="YS" name="size" value="YS">
@@ -491,8 +494,7 @@ UGH, I mean, can Dolan just get outta New York 🗽 already?!?! Worst record in 
    </div>
 </div>
 
-
-<!-- Womans Tee Info -->
+<!-- Lil Homies Tee Info -->
 <div class="modal youth-fit">
    <div class="modal-box">
       <h3>Lil' Homies</h3>
@@ -531,6 +533,156 @@ UGH, I mean, can Dolan just get outta New York 🗽 already?!?! Worst record in 
    </div>
 </div>
 
+<!-- All Sizes Tee Info -->
+<div class="modal all-sizes">
+   <div class="modal-box">
+      <h3>All Dem Sizes</h3>
+      <p>Check this shit out and find a size that fit dat ass.</p>
+
+      <div>
+         <p>Regular Fit <span class="inches">(inches)</span></p>
+      </div>
+      <table>
+         <thead>
+           <tr>
+             <th>SIZE</th>
+             <th>S</th>
+             <th>M</th>
+             <th>L</th>
+             <th>XL</th>
+             <th>2XL</th>
+             <th>3XL</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>LENGTH</td>
+             <td>28</td>
+             <td>29</td>
+             <td>30</td>
+             <td>31</td>
+             <td>32</td>
+             <td>32.5</td>
+           </tr>
+           <tr>
+             <td>WIDTH</td>
+             <td>20</td>
+             <td>21</td>
+             <td>22.5</td>
+             <td>24</td>
+             <td>25.5</td>
+             <td>27.5</td>
+           </tr>
+         </tbody>
+         </table>
+
+      <div>
+         <p>Woman's Cut <span class="inches">(inches)</span></p>
+      </div>
+      <table>
+         <thead>
+           <tr>
+             <th>SIZE</th>
+             <th>S</th>
+             <th>M</th>
+             <th>L</th>
+             <th>XL</th>
+             <th>2XL</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>LENGTH</td>
+             <td>26.5</td>
+             <td>27</td>
+             <td>27.5</td>
+             <td>28</td>
+             <td>28.5</td>
+           </tr>
+           <tr>
+             <td>WIDTH</td>
+             <td>16.75</td>
+             <td>17.75</td>
+             <td>18.75</td>
+             <td>20.25</td>
+             <td>21.75</td>
+           </tr>
+         </tbody>
+         </table>
+
+      <div>
+         <p>Slim Fit <span class="inches">(inches)</span></p>
+      </div>
+      <table>
+         <thead>
+           <tr>
+             <th>SIZE</th>
+             <th>S</th>
+             <th>M</th>
+             <th>L</th>
+             <th>XL</th>
+             <th>2XL</th>
+             <th>3XL</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>LENGTH</td>
+             <td>28</td>
+             <td>29</td>
+             <td>30</td>
+             <td>31</td>
+             <td>32</td>
+             <td>33</td>
+           </tr>
+           <tr>
+             <td>WIDTH</td>
+             <td>18</td>
+             <td>20</td>
+             <td>22</td>
+             <td>24</td>
+             <td>26</td>
+             <td>28</td>
+           </tr>
+         </tbody>
+         </table>
+      <div>
+         <p>Lil' Homies <span class="inches">(inches)</span></p>
+      </div>
+      <table>
+         <thead>
+           <tr>
+             <th>SIZE</th>
+             <th>YS (6-8)</th>
+             <th>YM (10-12)</th>
+             <th>YL (14-16)</th>
+           </tr>
+         </thead>
+         <tbody>
+           <tr>
+             <td>LENGTH</td>
+             <td>20.875</td>
+             <td>22.125</td>
+             <td>23.375</td>
+           </tr>
+           <tr>
+             <td>WIDTH</td>
+             <td>15.25</td>
+             <td>16.25</td>
+             <td>17.25</td>
+           </tr>
+         </tbody>
+         </table>
+         <button class="close-modal">CLOSE</button>
+   </div>
+</div>
+
+
+<script>
+	function closeOnSubmit(){
+		document.querySelector('.sign-up-modal').style.display = "none";
+	}
+</script>
 <!-- Womans Tee Info -->
 <div class="modal sign-up-modal">
    <div class="modal-box">
@@ -680,6 +832,7 @@ UGH, I mean, can Dolan just get outta New York 🗽 already?!?! Worst record in 
          }
          req.open("get", "alerts-form.html", true);
          req.send();
+
       }
 
       const signUpBtn = document.querySelector('.sign-up-btn');

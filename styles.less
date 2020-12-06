@@ -76,6 +76,13 @@ a.info {
   font-size: 1.5rem;
   height: 1.2rem;
   display: inline-block;
+  &.size-chart {
+    color: black;
+    font-size: 1.2rem;
+    font-family: @copy;
+    padding-left: 0;
+    text-transform: capitalize;
+  }
 }
 p {
   font-family: @copy;
@@ -607,6 +614,10 @@ header.scrolled {
       p {
         text-transform: uppercase;
         letter-spacing: 0.25rem;
+        span.inches {
+          font-size: 1.25rem;
+          letter-spacing: 0.15rem;
+        }
       }
     }
     table {
@@ -619,6 +630,9 @@ header.scrolled {
       padding-bottom: 1rem;
       font-size: 1.5rem;
       font-family: @copy;
+      &:nth-of-type(1) {
+        padding-right: 1.5rem;
+      }
     }
     td {
       padding: 1rem 0 0 0;
@@ -668,6 +682,23 @@ header.scrolled {
     box-shadow: 0 0 5rem 2rem @neon-purple;
     button.close-modal {
       color: @neon-purple;
+    }
+  }
+  &.all-sizes .modal-box {
+    box-shadow: 0 0 5rem 2rem @secondary;
+    button.close-modal {
+      color: @secondary;
+    }
+    table {
+      padding-top: 0.5rem;
+      padding-bottom: 1.5rem;
+      border-bottom: dotted #333 0.025rem;
+    }
+    div {
+      padding-top: 1.5rem;
+      p {
+        padding-left: 0.3rem;
+      }
     }
   }
 }
@@ -825,6 +856,7 @@ footer {
         text-align: left;
         &.shorter {
           width: 8.25rem;
+          line-height: 1.5rem;
         }
       }
     }
