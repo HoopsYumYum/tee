@@ -1017,11 +1017,11 @@ footer button div {
   background-color: #00d9ff;
 }
 .paypal-buttons-context-iframe {
-  height: 170px !important;
+  min-height: 170px !important;
 }
 @media screen and (min-width: 700px) {
   .paypal-buttons-context-iframe {
-    height: 260px !important;
+    min-height: 260px !important;
   }
 }
 .addthis_inline_share_toolbox {
