@@ -171,7 +171,7 @@
                   if(!sizeBoxes[i].classList.contains(selectionFit) && sizeBoxes[i].previousElementSibling.checked === true){
                      sizeBoxes[i].previousElementSibling.checked = false;
                      alertBox.innerHTML = `<img src="/img/red-alert.gif"/>
-                     <span>Select a new size</span>
+                     <span>Oh shit, you bess select a new size.</span>
                      <img src="/img/red-alert.gif"/>`;
                   };
                }
@@ -316,6 +316,10 @@ initPayPalButton();
 <p>
 UGH, I mean, can Dolan just get outta New York 🗽 already?!?! Worst record in basketball over the last 20 years is just the start of it tho. Oak 👴🏾 knows what I'm talking about, sup Oak 👊🏽 . I mean, this cat really needs to concentrate on JD &amp; The Straight Shot 🎸 and let the Knicks go...You know we had to slip in a Straight Shots zinger tho - LOL right 🤣 
 </p>
+
+<hr>
+
+<p><span class="tee-name">This tee</span> isn't your thing, it's all blessed. <a class="signup-link">Sign up here</a> to get alerts about dem new drops.</p>
 
 <hr>
 
@@ -835,11 +839,19 @@ UGH, I mean, can Dolan just get outta New York 🗽 already?!?! Worst record in 
       }
 
       const signUpBtn = document.querySelector('.sign-up-btn');
+      const signUpLinks = document.querySelectorAll('.signup-link');
 
       signUpBtn.addEventListener('click', function(){
          signUpModal();
          document.querySelector('.sign-up-modal').style.display="flex";
       });
+
+      for(let sl = 0; sl < signUpLinks.length; sl++){
+         signUpLinks[sl].addEventListener('click', function(){
+         signUpModal();
+         document.querySelector('.sign-up-modal').style.display="flex";
+      });
+      }
 
 </script>
 

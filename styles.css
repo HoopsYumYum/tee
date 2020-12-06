@@ -124,10 +124,14 @@ h3 {
   }
 }
 hr {
-  color: #fff;
+  color: black;
+  height: 0.5rem;
   margin: 3.5rem auto 4rem;
   width: 90vw;
   border-top: 0;
+  border: none;
+  border-top: solid 0.05rem #ff9500;
+  border-bottom: solid 0.05rem #fd5d30;
 }
 @media screen and (min-width: 700px) {
   hr {
@@ -152,7 +156,7 @@ hr {
     top: 4.5rem;
   }
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 1200px) {
   .logo {
     transform: rotate(2deg);
     top: 2.5rem;
@@ -279,12 +283,12 @@ header.scrolled {
 @media screen and (min-width: 700px) {
   header.scrolled {
     height: 8rem;
+    max-width: inherit;
   }
 }
 @media screen and (min-width: 1200px) {
   header.scrolled {
     height: 8rem;
-    max-width: inherit;
   }
 }
 header.scrolled .logo {
@@ -303,17 +307,17 @@ header.scrolled .logo {
 header.scrolled .logo img {
   width: 20vw;
 }
-@media screen and (min-width: 700px) {
+@media screen and (min-width: 410px) {
   header.scrolled .logo img {
-    width: 15.5vw;
-    margin-top: 0.33rem;
-    margin-left: 2rem;
+    width: 18vw;
   }
 }
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 700px) {
   header.scrolled .logo img {
     width: inherit;
     height: 6rem;
+    margin-top: 0.33rem;
+    margin-left: 2rem;
   }
 }
 header.scrolled .head-tag {
@@ -890,11 +894,12 @@ footer button div {
   align-items: center;
 }
 .payment-contianer .inner-payment-contianer .alert-msg span {
-  font-size: 2rem;
+  font-size: 1.6rem;
+  line-height: 2rem;
   font-family: 'Special Elite', cursive;
   color: #fd5d30;
   letter-spacing: 0.2rem;
-  text-transform: capitalize;
+  padding: 0 1.5rem;
   text-align: center;
 }
 .payment-contianer .inner-payment-contianer .alert-msg img {
@@ -1172,6 +1177,16 @@ footer button div {
   .form-button-div .form-button {
     max-width: 500px;
   }
+}
+a.signup-link {
+  font-size: inherit;
+  color: black;
+  background-color: #ff9500;
+  text-decoration: none;
+  display: inline-block;
+  padding: 0.02rem 1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03rem;
 }
 .signed-up footer {
   margin-top: 6rem;
