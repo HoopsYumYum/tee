@@ -12,6 +12,14 @@
    <link rel="shortcut icon" href="/img/favicon-32x32.png">
    <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Inconsolata:wght@500&family=Permanent+Marker&family=Roboto+Slab:wght@300&family=Special+Elite&display=swap" rel="stylesheet">
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-P9C9L2NNCQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-P9C9L2NNCQ');
+</script>
 </head>
 <body>
    <header class="header">
@@ -690,7 +698,7 @@ UGH, I mean, can Dolan just get outta New York 🗽 already?!?! Worst record in 
 <div class="modal sign-up-modal">
    <div class="modal-box">
       <h3>Get Dem Drop Alerts</h3>
-      <p>Get alerts when we drop hot new shit.</p>
+      <p>Get alerts when we drop hot new shit.<br/>But no spam from this jamm homie.</p>
       <div id="formContainer"></div>
 
       <button class="close-modal">CANCEL</button>
@@ -835,21 +843,93 @@ UGH, I mean, can Dolan just get outta New York 🗽 already?!?! Worst record in 
          }
          req.open("get", "alerts-form.html", true);
          req.send();
-
       }
+
+      const signJumpPhone = () => {
+		 const phonearea = document.querySelector('.phonearea input');
+		 const phonedetail1 = document.querySelector('.phonedetail1 input');
+		 const phonedetail2 = document.querySelector('.phonedetail2 input');
+		 const nameField = document.querySelector('.name-input input');
+
+		 const jumpInputs = function(inputClass, maxChars, nextInput){  
+		  inputClass.addEventListener('keyup', function(e){
+			  if(inputClass.value.length == maxChars && e.keyCode !== 37 && e.keyCode !== 38 && e.keyCode !== 39 && e.keyCode !== 40){
+				  nextInput.focus();
+			  }
+		  });
+		 }
+		  jumpInputs(phonearea, 3, phonedetail1);
+		  jumpInputs(phonedetail1, 3, phonedetail2);
+		  jumpInputs(phonedetail2, 4, nameField);
+      }
+
+      const fomail = function(){
+         const tmail = document.querySelector('.tmail');
+         const fmail = document.querySelector('.fmail');
+         tmail.value = `${Date.now()}@hoopsyumyum.com`;
+         fmail.addEventListener('keyup', function(){
+            tmail.value = fmail.value;
+         })
+      }
+
+      const contactBy = function(){
+		  const checkBoxContainer = document.querySelector('.alert-options');
+		  const checkBox = document.querySelectorAll('.check-box');
+		  const emailCheckBoxes = document.querySelector('.email-check-box');
+		  const phoneCheckBoxes = document.querySelector('.phone-check-box');
+		  const emailCont = document.querySelector('.form-field-container-email');
+		  const phoneCont = document.querySelector('.form-field-container-phone');
+         const tmail = document.querySelector('.tmail');
+         const fmail = document.querySelector('.fmail');
+        const subBtn = document.querySelector('.form-button');
+
+		  checkBoxContainer.addEventListener('click', function(){
+			  for(let i = 0; i < checkBox.length; i++){
+				  if(checkBox[i].value == 1 && (checkBox[i].checked === true)){
+					emailCont.style.opacity = 1;
+				  } else if (checkBox[i].value == 2 && (checkBox[i].checked === true)){
+					phoneCont.style.opacity = 1;
+              } else if(checkBox[i].value == 1 && (checkBox[i].checked !== true)){
+					emailCont.style.opacity = .2;
+               fmail.value = '';
+               tmail.value = `${Date.now()}@hoopsyumyum.com`;
+				  } else if (checkBox[i].value == 2 && (checkBox[i].checked !== true)){
+					phoneCont.style.opacity = .2;
+              }
+			  }
+           if((emailCheckBoxes.checked !== true) && (phoneCheckBoxes.checked !== true)){
+            subBtn.style.display = "none"
+           } else {
+            subBtn.style.display = "flex"
+           }
+		  })
+      }
+
 
       const signUpBtn = document.querySelector('.sign-up-btn');
       const signUpLinks = document.querySelectorAll('.signup-link');
 
+      const onSignUpOpem = function(){
+            signJumpPhone();
+            contactBy();
+            fomail();
+      }
+
       signUpBtn.addEventListener('click', function(){
          signUpModal();
          document.querySelector('.sign-up-modal').style.display="flex";
+         setTimeout(function(){ 
+            onSignUpOpem();
+          }, 1000);
       });
 
       for(let sl = 0; sl < signUpLinks.length; sl++){
          signUpLinks[sl].addEventListener('click', function(){
          signUpModal();
          document.querySelector('.sign-up-modal').style.display="flex";
+         setTimeout(function(){ 
+            onSignUpOpem();
+          }, 1000);
       });
       }
 

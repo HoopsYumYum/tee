@@ -642,6 +642,7 @@ header.scrolled .head-tag-3 {
 }
 .modal .modal-box {
   width: 92vw;
+  max-width: 500px;
   background: black;
   padding: 1.75rem;
   color: #fff;
@@ -711,7 +712,27 @@ header.scrolled .head-tag-3 {
   color: #ff9500;
 }
 .modal.sign-up-modal .modal-box div {
-  padding-top: 1.5rem;
+  padding-top: 0.5rem;
+}
+.modal.sign-up-modal .modal-box .phone-input-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 2rem;
+}
+.modal.sign-up-modal .modal-box .phone-input-container span {
+  width: 32%;
+}
+.modal.sign-up-modal .modal-box .phone-input-container span:nth-of-type(1) {
+  width: 25%;
+}
+.modal.sign-up-modal .modal-box .phone-input-container span:nth-of-type(2) {
+  width: 32%;
+}
+.modal.sign-up-modal .modal-box .phone-input-container span input {
+  text-align: center;
+  letter-spacing: 0.3rem;
 }
 .modal.regular-fit .modal-box {
   box-shadow: 0 0 5rem 2rem #00d9ff;
@@ -1095,13 +1116,68 @@ footer button div {
   border-color: #a200ff;
 }
 #formContainer {
-  padding-top: 0;
+  padding-top: 1rem;
 }
-.sign-up-form-container .mc-field-group:nth-of-type(1) {
-  transform: rotate(-1.2deg);
+.sign-up-form-container .form-field-container-temail {
+  display: none;
 }
-.sign-up-form-container .mc-field-group:nth-of-type(2) {
-  transform: rotate(1.2deg);
+.sign-up-form-container .form-field-container p.lc {
+  text-transform: capitalize;
+}
+.sign-up-form-container .form-field-container:nth-of-type(even) {
+  transform: rotate(-1deg);
+}
+.sign-up-form-container .form-field-container:nth-of-type(odd) {
+  transform: rotate(1deg);
+}
+.sign-up-form-container .form-field-container:nth-of-type(1) {
+  transform: rotate(2deg);
+  padding-top: 0 !important;
+}
+.sign-up-form-container .form-field-container-phone {
+  opacity: 0.2;
+  transition: all 0.2s;
+  letter-spacing: 0.2rem;
+}
+.sign-up-form-container .form-field-container-email {
+  opacity: 0.2;
+  transition: all 0.2s;
+  letter-spacing: 0.2rem;
+}
+.sign-up-form-container ul.alert-options {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  width: 100%;
+  margin: 0.5rem 0 0 0;
+}
+.sign-up-form-container ul.alert-options li {
+  display: block;
+  width: 49%;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+.sign-up-form-container ul.alert-options li input {
+  display: none;
+}
+.sign-up-form-container ul.alert-options li label {
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0;
+  border: solid 0.25rem #fff;
+}
+.sign-up-form-container ul.alert-options li:nth-of-type(1) input[type='checkbox']:checked + label {
+  background-color: #00d9ff;
+  border-color: #00d9ff;
+  color: black;
+  box-shadow: 3px 3px 1px 1px #ff00bf;
+}
+.sign-up-form-container ul.alert-options li:nth-of-type(2) input[type='checkbox']:checked + label {
+  background-color: #d9ff00;
+  border-color: #d9ff00;
+  color: black;
+  box-shadow: 3px 3px 1px 1px #a200ff;
 }
 .sign-up-form-container label {
   font-size: 1.4rem;
@@ -1146,8 +1222,8 @@ footer button div {
   margin-top: 1rem;
   margin-bottom: 2.5rem;
   border: none;
-  background-color: #ff00bf;
-  transform: rotate(-1.2deg);
+  background-color: transparent;
+  transform: rotate(1.2deg);
 }
 @media screen and (min-width: 1200px) {
   .form-button-div {
@@ -1158,7 +1234,7 @@ footer button div {
 }
 .form-button-div .form-button {
   position: absolute;
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   background-color: #00ff6a;
@@ -1172,6 +1248,7 @@ footer button div {
   text-align: center;
   font-size: 1.7rem;
   border-radius: 0;
+  box-shadow: 0.4rem 0.4rem 0rem 0rem #ff00bf;
 }
 @media screen and (min-width: 1200px) {
   .form-button-div .form-button {
